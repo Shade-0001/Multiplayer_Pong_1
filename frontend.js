@@ -232,19 +232,19 @@ function move_player_input(){
     window.onkeydown = function(inputtedValue){
         if (!frontEndPlayers[socket.id]) return;
             // 左入力
-            if (inputtedValue.keyCode == 37){
+            if (inputtedValue.keyCode == 37 || inputtedValue.keyCode == 65){
                 player_move_flag_left = true;
             }
             // 右入力
-            if (inputtedValue.keyCode == 39){
+            if (inputtedValue.keyCode == 39 || inputtedValue.keyCode == 68){
                 player_move_flag_right = true;
             }
             // 上入力
-            if (inputtedValue.keyCode == 38){
+            if (inputtedValue.keyCode == 38 || inputtedValue.keyCode == 87){
                 player_move_flag_up = true;
             }
             // 下入力
-            if (inputtedValue.keyCode == 40){
+            if (inputtedValue.keyCode == 40 || inputtedValue.keyCode == 83){
                 player_move_flag_down = true; 
             }
 
@@ -256,19 +256,19 @@ function move_player_input(){
     
     window.onkeyup = function(inputtedValue){
         // 左入力停止
-        if (inputtedValue.keyCode == 37){
+        if (inputtedValue.keyCode == 37 || inputtedValue.keyCode == 65){
             player_move_flag_left = false;
         }
         // 右入力停止
-        if (inputtedValue.keyCode == 39){
+        if (inputtedValue.keyCode == 39 || inputtedValue.keyCode == 68){
             player_move_flag_right = false;
         }
         // 上入力停止
-        if (inputtedValue.keyCode == 38){
+        if (inputtedValue.keyCode == 38 || inputtedValue.keyCode == 87){
             player_move_flag_up = false;
         }
         // 下入力停止
-        if (inputtedValue.keyCode == 40){
+        if (inputtedValue.keyCode == 40 || inputtedValue.keyCode == 83){
             player_move_flag_down = false;
         }
     }

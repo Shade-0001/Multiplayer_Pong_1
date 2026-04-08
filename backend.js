@@ -8,8 +8,7 @@ const server = http.createServer(app);
 const { Server } = require('socket.io');
 const io = new Server(server, { pingInterval: 2000, pingTimeout: 5000 })
 
-
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 
 var SCREEN_WIDTH = 900;
